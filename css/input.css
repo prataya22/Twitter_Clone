@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Tab underline indicator */
+  .tab-indicator::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 4px;
+    background: #1d9bf0;
+    border-radius: 9999px;
+  }
+
+  /* Compose input */
+  .compose-input::placeholder {
+    color: #536471;
+    font-size: 1.25rem;
+  }
+  .compose-input {
+    caret-color: #1d9bf0;
+  }
+
+  /* Search input focus */
+  .search-input:focus {
+    background: #000;
+    border-color: #1d9bf0;
+  }
+  .search-input::placeholder {
+    color: #536471;
+  }
+
+  /* Action button hover states */
+  .btn-reply:hover    { color: #1d9bf0; background: rgba(29,155,240,0.1); }
+  .btn-retweet:hover  { color: #00ba7c; background: rgba(0,186,124,0.1); }
+  .btn-like:hover     { color: #f91880; background: rgba(249,24,128,0.1); }
+  .btn-views:hover    { color: #1d9bf0; background: rgba(29,155,240,0.1); }
+  .btn-bookmark:hover { color: #1d9bf0; background: rgba(29,155,240,0.1); }
+  .btn-share:hover    { color: #1d9bf0; background: rgba(29,155,240,0.1); }
+}

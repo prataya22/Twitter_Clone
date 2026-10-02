@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="X (formerly Twitter) — See what's happening in the world right now.">
+    <title>Home / X</title>
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="bg-x-bg text-x-text font-inter antialiased h-screen overflow-hidden">
+    <div class="flex max-w-[1265px] mx-auto h-screen">
+
+        <!-- ══════════════ LEFT SIDEBAR ══════════════ -->
+        <aside class="flex-shrink-0 w-[72px] xl:w-[275px] flex flex-col h-screen overflow-y-auto px-2 xl:px-0">
+
+            <!-- Inner content: aligned left on xl, centered on smaller -->
+            <div class="flex flex-col justify-between h-full py-2 xl:pl-3">
+                <nav class="flex flex-col gap-1">
+
+                    <!-- X Logo -->
+                    <div
+                        class="flex items-center justify-center xl:justify-start p-3 rounded-full hover:bg-white/10 cursor-pointer w-fit xl:mx-0 mx-auto mb-1 transition-colors duration-200">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-7 h-7 fill-x-text">
+                            <g>
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Nav Item: Home (active) -->
+                    <a id="nav-home" aria-label="Home" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit group">
+                        <span class="material-symbols-outlined text-[26px] text-x-text"
+                            style="font-variation-settings:'FILL' 1;">home</span>
+                        <span class="hidden xl:block text-xl font-bold text-x-text">Home</span>
+                    </a>
+
+                    <!-- Nav Item: Explore -->
+                    <a id="nav-explore" aria-label="Explore" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">search</span>
+                        <span class="hidden xl:block text-xl text-x-text">Explore</span>
+                    </a>
+
+                    <!-- Nav Item: Notifications -->
+                    <a id="nav-notifications" aria-label="Notifications" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">notifications</span>
+                        <span class="hidden xl:block text-xl text-x-text">Notifications</span>
+                    </a>
+
+                    <!-- Nav Item: Messages -->
+                    <a id="nav-messages" aria-label="Messages" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">mail</span>
+                        <span class="hidden xl:block text-xl text-x-text">Messages</span>
+                    </a>
+
+                    <!-- Nav Item: Grok -->
+                    <a id="nav-grok" aria-label="Grok" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">auto_awesome</span>
+                        <span class="hidden xl:block text-xl text-x-text">Grok</span>
+                    </a>
+
+                    <!-- Nav Item: Lists -->
+                    <a id="nav-lists" aria-label="Lists" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">list_alt</span>
+                        <span class="hidden xl:block text-xl text-x-text">Lists</span>
+                    </a>
+
+                    <!-- Nav Item: Bookmarks -->
+                    <a id="nav-bookmarks" aria-label="Bookmarks" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">bookmark</span>
+                        <span class="hidden xl:block text-xl text-x-text">Bookmarks</span>
+                    </a>
+
+                    <!-- Nav Item: Communities -->
+                    <a id="nav-communities" aria-label="Communities" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">group</span>
+                        <span class="hidden xl:block text-xl text-x-text">Communities</span>
+                    </a>
+
+                    <!-- Nav Item: Premium -->
+                    <a id="nav-premium" aria-label="Premium" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <svg viewBox="0 0 24 24" class="w-[26px] h-[26px] fill-x-text flex-shrink-0">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        <span class="hidden xl:block text-xl text-x-text">Premium</span>
+                    </a>
+
+                    <!-- Nav Item: Profile -->
+                    <a id="nav-profile" aria-label="Profile" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">person</span>
+                        <span class="hidden xl:block text-xl text-x-text">Profile</span>
+                    </a>
+
+                    <!-- Nav Item: More -->
+                    <a id="nav-more" aria-label="More" href="#"
+                        class="flex items-center gap-5 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-fit">
+                        <span class="material-symbols-outlined text-[26px] text-x-text">more_horiz</span>
+                        <span class="hidden xl:block text-xl text-x-text">More</span>
+                    </a>
+
+                    <!-- Post Button -->
+                    <div class="mt-4">
+                        <!-- Full button on xl -->
+                        <button id="post-btn-full"
+                            class="hidden xl:block w-full bg-x-blue hover:bg-x-blue-hover text-white font-bold text-lg py-3 px-8 rounded-full transition-colors duration-200 cursor-pointer">
+                            Post
+                        </button>
+                        <!-- Icon button on smaller -->
+                        <button id="post-btn-icon" aria-label="Post"
+                            class="xl:hidden flex items-center justify-center bg-x-blue hover:bg-x-blue-hover text-white p-3 rounded-full transition-colors duration-200 cursor-pointer mx-auto">
+                            <span class="material-symbols-outlined text-[22px]">edit</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- User Profile (bottom of sidebar) -->
+                <div class="mb-2">
+                    <!-- Full on xl -->
+                    <div
+                        class="hidden xl:flex items-center gap-3 p-3 rounded-full hover:bg-white/10 cursor-pointer transition-colors duration-200 w-full">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNzg1NmZmIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlA8L3RleHQ+PC9zdmc+"
+                        alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[15px] text-x-text truncate">Prataya Ghosh</p>
+                            <p class="text-x-muted text-[15px] truncate">@prataya22</p>
+                        </div>
+                        <span class="material-symbols-outlined text-[20px] text-x-text flex-shrink-0">more_horiz</span>
+                    </div>
+                    <!-- Avatar only on smaller -->
+                    <div class="xl:hidden flex justify-center py-2">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNzg1NmZmIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlA8L3RleHQ+PC9zdmc+"
+                        alt="" class="w-12 h-12 rounded-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ══════════════ CENTER FEED ══════════════ -->
+        <main class="flex-1 border-x border-x-border min-w-0 max-w-[600px] overflow-y-auto h-screen">
+
+            <!-- Sticky Tabs Header -->
+            <div class="sticky top-0 z-10 bg-black/85 backdrop-blur-md border-b border-x-border">
+                <div class="flex">
+                    <!-- For You Tab (active) -->
+                    <button id="tab-foryou"
+                        class="flex-1 py-4 text-[15px] font-bold text-x-text hover:bg-white/5 transition-colors duration-200 relative tab-indicator cursor-pointer">
+                        For you
+                    </button>
+                    <!-- Following Tab -->
+                    <button id="tab-following"
+                        class="flex-1 py-4 text-[15px] font-medium text-x-muted hover:bg-white/5 transition-colors duration-200 relative cursor-pointer">
+                        Following
+                    </button>
+                </div>
+            </div>
+
+            <!-- ── Compose Post ── -->
+            <div class="flex gap-3 px-4 py-3 border-b border-x-border">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNzg1NmZmIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlA8L3RleHQ+PC9zdmc+"
+                        alt="" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <input id="compose-input" aria-label="Post text"
+                        class="compose-input w-full bg-transparent border-none text-x-text text-xl py-2 outline-none"
+                        type="text" placeholder="What is happening?!">
+                    <!-- Everyone can reply pill -->
+                    <div
+                        class="flex items-center gap-1 text-x-blue text-[14px] font-semibold py-2 border-b border-x-border cursor-pointer w-fit mb-3">
+                        <span class="material-symbols-outlined text-[16px]">public</span>
+                        Everyone can reply
+                    </div>
+                    <!-- Compose actions row -->
+                    <div class="flex items-center justify-between pt-1">
+                        <div class="flex items-center gap-1 text-x-blue">
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="Media" aria-label="Media">
+                                <span class="material-symbols-outlined text-[20px]">image</span>
+                            </button>
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="GIF" aria-label="GIF">
+                                <span class="material-symbols-outlined text-[20px]">gif</span>
+                            </button>
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="Poll" aria-label="Poll">
+                                <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+                            </button>
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="Emoji" aria-label="Emoji">
+                                <span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+                            </button>
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="Schedule" aria-label="Schedule">
+                                <span class="material-symbols-outlined text-[20px]">schedule</span>
+                            </button>
+                            <button
+                                class="p-2 rounded-full hover:bg-x-blue/10 transition-colors duration-200 cursor-pointer"
+                                title="Location" aria-label="Location">
+                                <span class="material-symbols-outlined text-[20px]">location_on</span>
+                            </button>
+                        </div>
+                        <button id="compose-post-btn"
+                            class="bg-x-blue text-white font-bold text-[15px] px-5 py-2 rounded-full opacity-50 cursor-default transition-all duration-200"
+                            disabled>Post</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ POSTS ════ -->
+
+            <!-- Post 1 — Alex Rivera (text only) -->
+            <article
+                class="flex gap-3 px-4 py-3 border-b border-x-border hover:bg-white/[0.03] transition-colors duration-150 cursor-pointer">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjZjkxODgwIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkE8L3RleHQ+PC9zdmc+"
+                        alt="Alex Rivera" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start justify-between mb-1">
+                        <div class="flex items-center gap-1 flex-wrap">
+                            <span class="font-bold text-[15px] text-x-text hover:underline cursor-pointer">Alex
+                                Rivera</span>
+                            <span class="material-symbols-outlined text-x-blue text-[16px]"
+                                style="font-variation-settings:'FILL' 1;">verified</span>
+                            <span class="text-x-muted text-[15px]">@alexrivera · 6h</span>
+                        </div>
+                        <button aria-label="More"
+                            class="p-1.5 rounded-full text-x-muted hover:bg-x-blue/10 hover:text-x-blue transition-colors duration-200 flex-shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                        </button>
+                    </div>
+                    <p class="text-[15px] text-x-text leading-relaxed mb-3">
+                        Shipped the new dashboard today.<br><br>Dark mode, keyboard shortcuts, and a much faster
+                        feed.<br><br>Feedback welcome.
+                    </p>
+                    <!-- Action Row -->
+                    <div class="flex items-center justify-between max-w-[425px] text-x-muted text-[13px] font-medium">
+                        <button aria-label="Reply"
+                            class="btn-reply flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>1.2K</span>
+                        </button>
+                        <button aria-label="Repost"
+                            class="btn-retweet flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">repeat</span><span>48.3K</span>
+                        </button>
+                        <button aria-label="Like"
+                            class="btn-like flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span><span>312K</span>
+                        </button>
+                        <button aria-label="Views"
+                            class="btn-views flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">bar_chart</span><span>12.4M</span>
+                        </button>
+                        <div class="flex items-center gap-0.5">
+                            <button aria-label="Bookmark"
+                                class="btn-bookmark p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share"
+                                class="btn-share p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 2 — CodeWithHarry (with image) -->
+            <article
+                class="flex gap-3 px-4 py-3 border-b border-x-border hover:bg-white/[0.03] transition-colors duration-150 cursor-pointer">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjMWQ5YmYwIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkg8L3RleHQ+PC9zdmc+"
+                        alt="CodeWithHarry" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start justify-between mb-1">
+                        <div class="flex items-center gap-1 flex-wrap">
+                            <span
+                                class="font-bold text-[15px] text-x-text hover:underline cursor-pointer">CodeWithHarry</span>
+                            <span class="material-symbols-outlined text-x-blue text-[16px]"
+                                style="font-variation-settings:'FILL' 1;">verified</span>
+                            <span class="text-x-muted text-[15px]">@CodeWithHarry · 6h</span>
+                        </div>
+                        <button aria-label="More"
+                            class="p-1.5 rounded-full text-x-muted hover:bg-x-blue/10 hover:text-x-blue transition-colors duration-200 flex-shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                        </button>
+                    </div>
+                    <p class="text-[15px] text-x-text leading-relaxed mb-3">Living legend 🔥</p>
+                    <div class="mb-3 rounded-2xl overflow-hidden border border-x-border">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxZDliZjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMGJhN2MiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjQ1MCIgeT0iMjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIHBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg=="
+                            alt="Post image" class="w-full block">
+                    </div>
+                    <div class="flex items-center justify-between max-w-[425px] text-x-muted text-[13px] font-medium">
+                        <button aria-label="Reply"
+                            class="btn-reply flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>843</span>
+                        </button>
+                        <button aria-label="Repost"
+                            class="btn-retweet flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">repeat</span><span>5.2K</span>
+                        </button>
+                        <button aria-label="Like"
+                            class="btn-like flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span><span>28.1K</span>
+                        </button>
+                        <button aria-label="Views"
+                            class="btn-views flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">bar_chart</span><span>1.8M</span>
+                        </button>
+                        <div class="flex items-center gap-0.5">
+                            <button aria-label="Bookmark"
+                                class="btn-bookmark p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share"
+                                class="btn-share p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 3 — CodeMeme (with meme image) -->
+            <article
+                class="flex gap-3 px-4 py-3 border-b border-x-border hover:bg-white/[0.03] transition-colors duration-150 cursor-pointer">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjMDBiYTdjIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkM8L3RleHQ+PC9zdmc+"
+                        alt="CodeMeme" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start justify-between mb-1">
+                        <div class="flex items-center gap-1 flex-wrap">
+                            <span class="font-bold text-[15px] text-x-text hover:underline cursor-pointer">Code
+                                Memes</span>
+                            <span class="text-x-muted text-[15px]">@CodeMeme · 6h</span>
+                        </div>
+                        <button aria-label="More"
+                            class="p-1.5 rounded-full text-x-muted hover:bg-x-blue/10 hover:text-x-blue transition-colors duration-200 flex-shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                        </button>
+                    </div>
+                    <p class="text-[15px] text-x-text leading-relaxed mb-3">This is an amazing coding meme 😂</p>
+                    <div class="mb-3 rounded-2xl overflow-hidden border border-x-border">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmOTE4ODAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3ODU2ZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjQ1MCIgeT0iMjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1lbWUgcGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+"
+                            alt="Coding meme" class="w-full block">
+                    </div>
+                    <div class="flex items-center justify-between max-w-[425px] text-x-muted text-[13px] font-medium">
+                        <button aria-label="Reply"
+                            class="btn-reply flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>2.4K</span>
+                        </button>
+                        <button aria-label="Repost"
+                            class="btn-retweet flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">repeat</span><span>18.7K</span>
+                        </button>
+                        <button aria-label="Like"
+                            class="btn-like flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span><span>91.2K</span>
+                        </button>
+                        <button aria-label="Views"
+                            class="btn-views flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">bar_chart</span><span>4.3M</span>
+                        </button>
+                        <div class="flex items-center gap-0.5">
+                            <button aria-label="Bookmark"
+                                class="btn-bookmark p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share"
+                                class="btn-share p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 4 — Pictures Folder (with image) -->
+            <article
+                class="flex gap-3 px-4 py-3 border-b border-x-border hover:bg-white/[0.03] transition-colors duration-150 cursor-pointer">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNzg1NmZmIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlA8L3RleHQ+PC9zdmc+"
+                        alt="" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start justify-between mb-1">
+                        <div class="flex items-center gap-1 flex-wrap">
+                            <span class="font-bold text-[15px] text-x-text hover:underline cursor-pointer">Pictures
+                                Folder</span>
+                            <span class="text-x-muted text-[15px]">@PicturesFolder · 8h</span>
+                        </div>
+                        <button aria-label="More"
+                            class="p-1.5 rounded-full text-x-muted hover:bg-x-blue/10 hover:text-x-blue transition-colors duration-200 flex-shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                        </button>
+                    </div>
+                    <p class="text-[15px] text-x-text leading-relaxed mb-3">legend 🙌</p>
+                    <div class="mb-3 rounded-2xl overflow-hidden border border-x-border">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3ODU2ZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxZDliZjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjQ1MCIgeT0iMjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIHBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg=="
+                            alt="Post image" class="w-full block">
+                    </div>
+                    <div class="flex items-center justify-between max-w-[425px] text-x-muted text-[13px] font-medium">
+                        <button aria-label="Reply"
+                            class="btn-reply flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>421</span>
+                        </button>
+                        <button aria-label="Repost"
+                            class="btn-retweet flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">repeat</span><span>3.1K</span>
+                        </button>
+                        <button aria-label="Like"
+                            class="btn-like flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span><span>19.8K</span>
+                        </button>
+                        <button aria-label="Views"
+                            class="btn-views flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">bar_chart</span><span>876K</span>
+                        </button>
+                        <div class="flex items-center gap-0.5">
+                            <button aria-label="Bookmark"
+                                class="btn-bookmark p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share"
+                                class="btn-share p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 5 — Vercel (text with link) -->
+            <article
+                class="flex gap-3 px-4 py-3 border-b border-x-border hover:bg-white/[0.03] transition-colors duration-150 cursor-pointer">
+                <div class="flex-shrink-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNTM2NDcxIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlY8L3RleHQ+PC9zdmc+"
+                        alt="Vercel" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start justify-between mb-1">
+                        <div class="flex items-center gap-1 flex-wrap">
+                            <span class="font-bold text-[15px] text-x-text hover:underline cursor-pointer">Vercel</span>
+                            <span class="material-symbols-outlined text-x-blue text-[16px]"
+                                style="font-variation-settings:'FILL' 1;">verified</span>
+                            <span class="text-x-muted text-[15px]">@vercel · 3h</span>
+                        </div>
+                        <button aria-label="More"
+                            class="p-1.5 rounded-full text-x-muted hover:bg-x-blue/10 hover:text-x-blue transition-colors duration-200 flex-shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                        </button>
+                    </div>
+                    <p class="text-[15px] text-x-text leading-relaxed mb-3">
+                        Next.js 15 is here 🎉<br><br>
+                        Faster builds. Better caching. React 19 support. Ship faster than ever.<br><br>
+                        <span class="text-x-blue cursor-pointer hover:underline">nextjs.org/blog/next-15</span>
+                    </p>
+                    <div class="flex items-center justify-between max-w-[425px] text-x-muted text-[13px] font-medium">
+                        <button aria-label="Reply"
+                            class="btn-reply flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>3.8K</span>
+                        </button>
+                        <button aria-label="Repost"
+                            class="btn-retweet flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">repeat</span><span>22.1K</span>
+                        </button>
+                        <button aria-label="Like"
+                            class="btn-like flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span><span>108K</span>
+                        </button>
+                        <button aria-label="Views"
+                            class="btn-views flex items-center gap-1.5 py-1.5 px-2 rounded-full transition-colors duration-200">
+                            <span class="material-symbols-outlined text-[20px]">bar_chart</span><span>6.2M</span>
+                        </button>
+                        <div class="flex items-center gap-0.5">
+                            <button aria-label="Bookmark"
+                                class="btn-bookmark p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share"
+                                class="btn-share p-1.5 rounded-full transition-colors duration-200">
+                                <span class="material-symbols-outlined text-[20px]">share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- ══════════════ RIGHT PANEL ══════════════ -->
+        <aside class="hidden lg:block flex-shrink-0 w-[350px] pl-8 pr-4 overflow-y-auto h-screen">
+            <div class="pt-3 flex flex-col gap-4">
+
+                <!-- Search Bar -->
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-x-muted text-[20px] pointer-events-none">search</span>
+                    <input id="search-input" aria-label="Search" type="text" placeholder="Search"
+                        class="search-input w-full bg-x-surface text-x-text border border-transparent rounded-full py-3 pl-12 pr-4 text-[15px] outline-none transition-colors duration-200">
+                </div>
+
+                <!-- What's Happening -->
+                <div class="bg-x-surface rounded-2xl overflow-hidden">
+                    <h2 class="text-xl font-extrabold text-x-text px-4 pt-4 pb-2">What's happening</h2>
+
+                    <!-- Trend items -->
+                    <div class="px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <p class="text-[13px] text-x-muted">Trending in India</p>
+                        <p class="font-bold text-[15px] text-x-text">#Orry</p>
+                        <p class="text-[13px] text-x-muted">40.2K posts</p>
+                    </div>
+                    <div class="px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <p class="text-[13px] text-x-muted">Trending in India</p>
+                        <p class="font-bold text-[15px] text-x-text">#Harry</p>
+                        <p class="text-[13px] text-x-muted">40.2K posts</p>
+                    </div>
+                    <div class="px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <p class="text-[13px] text-x-muted">Technology · Trending</p>
+                        <p class="font-bold text-[15px] text-x-text">Next.js 15</p>
+                        <p class="text-[13px] text-x-muted">128K posts</p>
+                    </div>
+                    <div class="px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <p class="text-[13px] text-x-muted">Trending in India</p>
+                        <p class="font-bold text-[15px] text-x-text">#CodeWithHarry</p>
+                        <p class="text-[13px] text-x-muted">40.2K posts</p>
+                    </div>
+                    <div class="px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <p class="text-[13px] text-x-muted">Sports · Trending</p>
+                        <p class="font-bold text-[15px] text-x-text">Champions League</p>
+                        <p class="text-[13px] text-x-muted">652K posts</p>
+                    </div>
+                    <button
+                        class="block w-full text-left px-4 py-4 text-x-blue text-[15px] hover:bg-white/[0.04] transition-colors duration-200">
+                        Show more
+                    </button>
+                </div>
+
+                <!-- Who to Follow -->
+                <div class="bg-x-surface rounded-2xl overflow-hidden">
+                    <h2 class="text-xl font-extrabold text-x-text px-4 pt-4 pb-2">Who to follow</h2>
+
+                    <!-- Follow item: Vercel -->
+                    <div
+                        class="flex items-center justify-between gap-3 px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjNTM2NDcxIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlY8L3RleHQ+PC9zdmc+"
+                                alt="Vercel" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-1">
+                                    <span class="font-bold text-[15px] text-x-text truncate">Vercel</span>
+                                    <span class="material-symbols-outlined text-x-blue text-[14px]"
+                                        style="font-variation-settings:'FILL' 1;">verified</span>
+                                </div>
+                                <p class="text-x-muted text-[15px]">@vercel</p>
+                            </div>
+                        </div>
+                        <button
+                            class="flex-shrink-0 bg-x-text text-x-bg font-bold text-[14px] px-4 py-1.5 rounded-full hover:bg-x-text/90 transition-colors duration-200 cursor-pointer">
+                            Follow
+                        </button>
+                    </div>
+
+                    <!-- Follow item: React -->
+                    <div
+                        class="flex items-center justify-between gap-3 px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjMGVhNWU5Ii8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+PC9zdmc+"
+                                alt="React" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+                            <div class="min-w-0">
+                                <p class="font-bold text-[15px] text-x-text truncate">React</p>
+                                <p class="text-x-muted text-[15px]">@reactjs</p>
+                            </div>
+                        </div>
+                        <button
+                            class="flex-shrink-0 bg-x-text text-x-bg font-bold text-[14px] px-4 py-1.5 rounded-full hover:bg-x-text/90 transition-colors duration-200 cursor-pointer">
+                            Follow
+                        </button>
+                    </div>
+
+                    <!-- Follow item: shadcn -->
+                    <div
+                        class="flex items-center justify-between gap-3 px-4 py-3 hover:bg-white/[0.04] cursor-pointer transition-colors duration-200">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSIjZmZkNDAwIi8+PHRleHQgeD0iNDgiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlM8L3RleHQ+PC9zdmc+"
+                                alt="shadcn" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+                            <div class="min-w-0">
+                                <p class="font-bold text-[15px] text-x-text truncate">shadcn</p>
+                                <p class="text-x-muted text-[15px]">@shadcn</p>
+                            </div>
+                        </div>
+                        <button
+                            class="flex-shrink-0 bg-x-text text-x-bg font-bold text-[14px] px-4 py-1.5 rounded-full hover:bg-x-text/90 transition-colors duration-200 cursor-pointer">
+                            Follow
+                        </button>
+                    </div>
+
+                    <button
+                        class="block w-full text-left px-4 py-4 text-x-blue text-[15px] hover:bg-white/[0.04] transition-colors duration-200">
+                        Show more
+                    </button>
+                </div>
+
+                <!-- Footer Terms -->
+                <div class="flex flex-wrap gap-x-3 gap-y-1 text-x-muted text-[13px] px-1 pb-4">
+                    <a href="#" class="hover:underline cursor-pointer">Terms of Service</a>
+                    <a href="#" class="hover:underline cursor-pointer">Privacy Policy</a>
+                    <a href="#" class="hover:underline cursor-pointer">Cookie Policy</a>
+                    <a href="#" class="hover:underline cursor-pointer">Accessibility</a>
+                    <a href="#" class="hover:underline cursor-pointer">Ads info</a>
+                    <a href="#" class="hover:underline cursor-pointer">More &hellip;</a>
+                    <span>© 2026 X Corp.</span>
+                </div>
+
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        // ── Tab switching ──
+        const tabForYou = document.getElementById('tab-foryou');
+        const tabFollowing = document.getElementById('tab-following');
+
+        tabForYou.addEventListener('click', () => {
+            tabForYou.classList.add('tab-indicator', 'font-bold', 'text-x-text');
+            tabForYou.classList.remove('font-medium', 'text-x-muted');
+            tabFollowing.classList.remove('tab-indicator', 'font-bold', 'text-x-text');
+            tabFollowing.classList.add('font-medium', 'text-x-muted');
+        });
+
+        tabFollowing.addEventListener('click', () => {
+            tabFollowing.classList.add('tab-indicator', 'font-bold', 'text-x-text');
+            tabFollowing.classList.remove('font-medium', 'text-x-muted');
+            tabForYou.classList.remove('tab-indicator', 'font-bold', 'text-x-text');
+            tabForYou.classList.add('font-medium', 'text-x-muted');
+        });
+
+        // ── Compose input: enable/disable Post button ──
+        const composeInput = document.getElementById('compose-input');
+        const composePostBtn = document.getElementById('compose-post-btn');
+
+        composeInput.addEventListener('input', (e) => {
+            const hasText = e.target.value.trim().length > 0;
+            composePostBtn.disabled = !hasText;
+            if (hasText) {
+                composePostBtn.classList.remove('opacity-50', 'cursor-default');
+                composePostBtn.classList.add('cursor-pointer', 'hover:bg-x-blue-hover');
+            } else {
+                composePostBtn.classList.add('opacity-50', 'cursor-default');
+                composePostBtn.classList.remove('cursor-pointer', 'hover:bg-x-blue-hover');
+            }
+        });
+    </script>
+</body>
+
+</html>
